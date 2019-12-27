@@ -18,8 +18,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
            guard let windowScene = (scene as? UIWindowScene) else { return }
            window = UIWindow(frame: windowScene.coordinateSpace.bounds)
            window?.windowScene = windowScene
-           window?.rootViewController = ViewController(nibName: nil, bundle: nil)
-           window?.makeKeyAndVisible()
+//           window?.rootViewController = ViewController(nibName: nil, bundle: nil)
+//           window?.makeKeyAndVisible()
+          let nav1 = UINavigationController()
+          let mainView = ChampionsListViewController(nibName: nil, bundle: nil)
+          nav1.viewControllers = [mainView]
+          self.window!.rootViewController = nav1
+          self.window?.makeKeyAndVisible()
        }
 
     func sceneDidDisconnect(_ scene: UIScene) {
