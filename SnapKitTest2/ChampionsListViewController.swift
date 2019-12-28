@@ -43,13 +43,21 @@ class ChampionsListViewController: UIViewController {
 }
 extension ChampionsListViewController : UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard champions != nil else {return 0}
          return champions!.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ChampionCell", for: indexPath) as? CustomChampionCell else {fatalError("The cell is not CustomChampionCell")}
-            cell.champion = champions![indexPath.row]
-        //tutaj przenieść to z Champion cell
+        
+            let champion = champions![indexPath.row]
+            cell.championNameLabel.text = champion.name
+            cell.championLineFirst.image = UIImage(named:
+                "\(champion.lines[0].rawValue)")
+            if champion.lines.count > 1 {
+                cell.championLineSecond.image = UIImage(named:
+                "\(champion.lines[1].rawValue)")
+            }
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
