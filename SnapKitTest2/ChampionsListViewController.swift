@@ -58,6 +58,10 @@ extension ChampionsListViewController : UITableViewDataSource,UITableViewDelegat
                 cell.championLineSecond.image = UIImage(named:
                 "\(champion.lines[1].rawValue)")
             }
+            cell.championImage.image = UIImage(named:"ADC")
+            cell.championTypeFirst.image = UIImage(named:"SUPP")
+            cell.championTypeSecond.image = UIImage(named:"JUNG")
+        
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
