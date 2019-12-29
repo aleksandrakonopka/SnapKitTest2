@@ -19,6 +19,8 @@ class ChampionsListViewController: UIViewController {
         championsLoaderImpl = ChampionsLoaderImpl()
         championsLoaderImpl?.loadAllChampions(completion: { (champion) in
             print("Done")
+            self.champions = champion
+            self.tableView.reloadData()
         })
         
         champions = [Champion(name: "Champion1", types: [.AD], lines: [.JUNG]),Champion(name: "Champion2", types: [.AD], lines: [.JUNG,.MID]),Champion(name: "Champion3", types: [.AD], lines: [.JUNG]),Champion(name: "Champion4", types: [.AD], lines: [.JUNG,.TOP]),Champion(name: "Champion5", types: [.AD], lines: [.JUNG]),Champion(name: "Champion6", types: [.AD], lines: [.JUNG]),Champion(name: "Champion7", types: [.AD], lines: [.JUNG]),Champion(name: "Champion8", types: [.AD], lines: [.JUNG]),Champion(name: "Champion9", types: [.AD], lines: [.ADC]),Champion(name: "Champion10", types: [.AD], lines: [.SUPP]),Champion(name: "Champion11", types: [.AD], lines: [.JUNG]),Champion(name: "Champion12", types: [.AD], lines: [.ADC]),Champion(name: "Champion13", types: [.AD], lines: [.JUNG]),Champion(name: "Champion14", types: [.AD], lines: [.JUNG]),Champion(name: "Champion15", types: [.AD], lines: [.JUNG]),Champion(name: "Champion16", types: [.AD], lines: [.JUNG]),Champion(name: "Champion17", types: [.AD], lines: [.JUNG]),Champion(name: "Champion18", types: [.AD], lines: [.JUNG]),Champion(name: "Champion19", types: [.AD], lines: [.JUNG]),Champion(name: "Champion20", types: [.AD], lines: [.JUNG])]
