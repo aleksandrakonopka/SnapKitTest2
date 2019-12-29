@@ -10,10 +10,17 @@ import UIKit
 import SnapKit
 
 class ChampionsListViewController: UIViewController {
-     var tableView : UITableView!
+    var tableView : UITableView!
     var champions : [Champion]?
-    override func viewDidLoad() {
+    var championsLoaderImpl : ChampionLoader?
+    
+    override func viewDidLoad(){
         super.viewDidLoad()
+        championsLoaderImpl = ChampionsLoaderImpl()
+        championsLoaderImpl?.loadAllChampions(completion: { (champion) in
+            print("Done")
+        })
+        
         champions = [Champion(name: "Champion1", types: [.AD], lines: [.JUNG]),Champion(name: "Champion2", types: [.AD], lines: [.JUNG,.MID]),Champion(name: "Champion3", types: [.AD], lines: [.JUNG]),Champion(name: "Champion4", types: [.AD], lines: [.JUNG,.TOP]),Champion(name: "Champion5", types: [.AD], lines: [.JUNG]),Champion(name: "Champion6", types: [.AD], lines: [.JUNG]),Champion(name: "Champion7", types: [.AD], lines: [.JUNG]),Champion(name: "Champion8", types: [.AD], lines: [.JUNG]),Champion(name: "Champion9", types: [.AD], lines: [.ADC]),Champion(name: "Champion10", types: [.AD], lines: [.SUPP]),Champion(name: "Champion11", types: [.AD], lines: [.JUNG]),Champion(name: "Champion12", types: [.AD], lines: [.ADC]),Champion(name: "Champion13", types: [.AD], lines: [.JUNG]),Champion(name: "Champion14", types: [.AD], lines: [.JUNG]),Champion(name: "Champion15", types: [.AD], lines: [.JUNG]),Champion(name: "Champion16", types: [.AD], lines: [.JUNG]),Champion(name: "Champion17", types: [.AD], lines: [.JUNG]),Champion(name: "Champion18", types: [.AD], lines: [.JUNG]),Champion(name: "Champion19", types: [.AD], lines: [.JUNG]),Champion(name: "Champion20", types: [.AD], lines: [.JUNG])]
         createTable()
         view.backgroundColor = .yellow
@@ -23,14 +30,16 @@ class ChampionsListViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         setupTableViewConstraints()
     }
+    
     func setupTableViewConstraints(){
         tableView.snp.makeConstraints { (make) -> Void in
             make.top.equalTo(view.safeAreaLayoutGuide).offset(0)
             make.left.equalTo(view).offset(0)
             make.bottom.equalTo(view).offset(0)
             make.right.equalTo(view).offset(0)
-        }//do view Will appear
+        }
     }
+    
     func createTable(){
         tableView = UITableView()
         tableView.delegate = self
@@ -41,6 +50,7 @@ class ChampionsListViewController: UIViewController {
         tableView.reloadData()
     }
 }
+
 extension ChampionsListViewController : UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard champions != nil else {return 0}
@@ -64,8 +74,8 @@ extension ChampionsListViewController : UITableViewDataSource,UITableViewDelegat
         
         return cell
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
-    
 }

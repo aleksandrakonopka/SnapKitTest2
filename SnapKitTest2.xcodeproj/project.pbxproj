@@ -14,6 +14,7 @@
 		1F55F4BF23B68B8100FB6DFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F55F4BD23B68B8100FB6DFF /* LaunchScreen.storyboard */; };
 		1FD89A6323B6A6E30043B56A /* CustomChampionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD89A6223B6A6E30043B56A /* CustomChampionCell.swift */; };
 		1FFCC69D23B7C72C00EB5C7E /* Champion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFCC69C23B7C72C00EB5C7E /* Champion.swift */; };
+		1FFCC69F23B8EBD800EB5C7E /* ChampionLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFCC69E23B8EBD800EB5C7E /* ChampionLoader.swift */; };
 		58B67BEA765E54EC5A8CC588 /* Pods_SnapKitTest2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A51141BD3796E4CE02579B0 /* Pods_SnapKitTest2.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		1F55F4C023B68B8100FB6DFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FD89A6223B6A6E30043B56A /* CustomChampionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomChampionCell.swift; sourceTree = "<group>"; };
 		1FFCC69C23B7C72C00EB5C7E /* Champion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Champion.swift; sourceTree = "<group>"; };
+		1FFCC69E23B8EBD800EB5C7E /* ChampionLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionLoader.swift; sourceTree = "<group>"; };
 		7AA0BAE0AF32CC77C554712A /* Pods-SnapKitTest2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapKitTest2.release.xcconfig"; path = "Target Support Files/Pods-SnapKitTest2/Pods-SnapKitTest2.release.xcconfig"; sourceTree = "<group>"; };
 		9A51141BD3796E4CE02579B0 /* Pods_SnapKitTest2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapKitTest2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC08973A7CC0FF35D5056987 /* Pods-SnapKitTest2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapKitTest2.debug.xcconfig"; path = "Target Support Files/Pods-SnapKitTest2/Pods-SnapKitTest2.debug.xcconfig"; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				1F55F4C023B68B8100FB6DFF /* Info.plist */,
 				1FD89A6223B6A6E30043B56A /* CustomChampionCell.swift */,
 				1FFCC69C23B7C72C00EB5C7E /* Champion.swift */,
+				1FFCC69E23B8EBD800EB5C7E /* ChampionLoader.swift */,
 			);
 			path = SnapKitTest2;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				1FFCC69D23B7C72C00EB5C7E /* Champion.swift in Sources */,
 				1F55F4B723B68B7F00FB6DFF /* ChampionsListViewController.swift in Sources */,
 				1FD89A6323B6A6E30043B56A /* CustomChampionCell.swift in Sources */,
+				1FFCC69F23B8EBD800EB5C7E /* ChampionLoader.swift in Sources */,
 				1F55F4B323B68B7F00FB6DFF /* AppDelegate.swift in Sources */,
 				1F55F4B523B68B7F00FB6DFF /* SceneDelegate.swift in Sources */,
 			);
